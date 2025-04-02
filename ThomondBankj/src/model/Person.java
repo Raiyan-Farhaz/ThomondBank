@@ -1,3 +1,5 @@
+package model;
+
 import java.time.LocalDate;
 
 public class Person {
@@ -44,4 +46,10 @@ public class Person {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + ", Address: " + address + ", DOB: " + dob;
+    }
 }
+

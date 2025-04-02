@@ -1,3 +1,5 @@
+package model;
+
 import java.time.LocalDate;
 
 public class Account {
@@ -25,9 +27,7 @@ public class Account {
         return dateCreated;
     }
 
-    public void setDateCreated(LocalDate dateCreated) {
-        this.dateCreated = dateCreated;
-    }
+
 
     public int getCustNo() {
         return custNo;
@@ -44,4 +44,10 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
 }

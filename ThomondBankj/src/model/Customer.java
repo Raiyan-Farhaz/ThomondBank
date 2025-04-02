@@ -1,3 +1,5 @@
+package model;
+
 import java.time.LocalDate;
 
 public class Customer extends Person {
@@ -9,4 +11,11 @@ public class Customer extends Person {
     }
 
     public int getCustNo() { return custNo; }
+
+    public void setCustNo(int custNo) { this.custNo = custNo; }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", model.Customer No: " + custNo;
+    }
 }

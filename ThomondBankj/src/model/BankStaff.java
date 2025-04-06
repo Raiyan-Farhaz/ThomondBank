@@ -16,21 +16,17 @@ public class BankStaff extends Person {
         return empNo;
     }
 
-    public void setEmpNo(int empNo) {
-        this.empNo = empNo;
-    }
+
 
     public String getJobTitle() {
         return jobTitle;
     }
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
+
 
 
     @Override
-    public String toString() {
-        return super.toString() + ", Employee No: " + empNo + ", Job Title: " + jobTitle;
+    public void displayInfo() {
+        System.out.println("Staff Info: " + getFirstName() + " " + getLastName() + ", " + getJobTitle() + ", DOB: " + getDob());
     }
 }

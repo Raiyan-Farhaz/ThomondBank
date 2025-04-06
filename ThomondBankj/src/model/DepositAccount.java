@@ -1,14 +1,20 @@
 package model;
 
 public class DepositAccount extends Account {
-    private static double AIR = 0.02; // 2% Interest Rate
+    public static double AIR = 0.02; // 2% Interest Rate
 
-    public DepositAccount(int id, int custNo, double balance) {
-        super(id, custNo, balance, java.time.LocalDate.now());
+    public DepositAccount(int id, int custNo, double balance)
+    {
+        super(id, custNo, balance);
     }
-    public static double getAIR() { return AIR; }
-    public static void setAIR(double air) { AIR = air; }
 
+    @Override
+    public void withdraw(double amount) {
+        if (amount > getBalance()) {
+            throw new IllegalArgumentException("Insufficient funds for withdrawal.");
+        }
+        setBalance(getBalance() - amount);
+    }
 
 
 }

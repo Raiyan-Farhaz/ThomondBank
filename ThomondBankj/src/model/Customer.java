@@ -12,10 +12,10 @@ public class Customer extends Person {
 
     public int getCustNo() { return custNo; }
 
-    public void setCustNo(int custNo) { this.custNo = custNo; }
+
 
     @Override
-    public String toString() {
-        return super.toString() + ", model.Customer No: " + custNo;
+    public void displayInfo() {
+        System.out.println("Customer Info: " + getFirstName() + " " + getLastName() + ", " + getAddress());
     }
 }

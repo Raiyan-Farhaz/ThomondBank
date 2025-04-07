@@ -153,7 +153,7 @@ public class ThomondBankGUI {
 
     private void ChangingAIR() {
         try {
-            if (DepositButton.isSelected()) {
+            if (DepositRadioButton.isSelected()) {
                 double newAIR = Double.parseDouble(JOptionPane.showInputDialog("Enter new AIR for Deposit Accounts:"));
                 DepositAccount.AIR = newAIR;
                 JOptionPane.showMessageDialog(rootPanel, "Deposit Account AIR updated to: " + newAIR);
